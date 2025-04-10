@@ -3,7 +3,9 @@
 # Prctical 1 Fabric hyperledger
 
 **to update the system**
+```
 sudo apt update
+```
 
 **to install golang-go**
 ```

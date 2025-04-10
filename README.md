@@ -1,6 +1,7 @@
 # Blockchain-_assign.
 
-# Practical 1 Fabric hyperledger
+# Practical-1: Fabric hyperledger
+It is a permissioned blockchain framework designed for enterprise use, offering modular architecture, privacy through private channels, and customizable consensus mechanisms. It ensures secure and scalable transactions, allowing businesses to build tailored solutions for supply chain, finance, and healthcare.
 
 **to update the system**
 ```
@@ -79,7 +80,16 @@ cd test-network
 
 
 
+
+
+
 # Practical- 2 : IPFS
+InterPlanetary File System is a
+decentralized protocol for storing and sharing files across a distributed network. By using content addressing (file hashes), IPFS removes the reliance on centralized servers, providing permanent and efficient file storage. It’s ideal for blockchain applications needing large off-chain data storage.
+
+
+
+
 **to install IPFS**
 ```
 wget https://dist.ipfs.io/kubo/v0.32.1/kubo_v0.32.1_linux-amd64.tar.gz
@@ -214,6 +224,9 @@ ipfs add decrypted_file.txt
 
 
 
+
+
+
 # Practical-3 Metamask
 
 **What is metamask?**
@@ -271,9 +284,17 @@ you will get some test tokens...
 
 
 **Now if we want to send money,we can di it by....**
+
+
 clicking on **send**
+
+
 Now enter the public key of whom you want to send tokens
+
+
 Then, add tokens
+
+
 And, continue
 
 ![Screenshot (161)](https://github.com/user-attachments/assets/780f4409-1f64-484e-b319-4796e8e1b154)
@@ -285,15 +306,23 @@ And, continue
 CryptoZombies is an interactive and game baesd platform where we can learn Solidity, the programming language used for writing smart contracts on the Ethereum blockchain. It teaches us by building a zombie game step-by-step. From different lessons we can learn the following:-
 
 **Lesson 1: Making the Zombie Factory**
+
+
 *In this lesson we learned...*
+
+
 
 Solidity basics
 
+
 Contract structure
+
 
 State variables
 
+
 Functions
+
 
 Events
 
@@ -331,7 +360,10 @@ contract ZombieFactory {
 
 ```
 **Lesson 2: Zombie Attributes**
+
+
 *In this chapter we learnt:-*
+
 
 to access modifiers (public, private, internal)
 
@@ -357,10 +389,15 @@ function createRandomZombie(string memory _name) public {
 ```
 
 **Lesson 3: Advanced Solidity Concepts**
+
+
+
 *in this lesson we learned to...*
 
 import
+
 Inheritance
+
 Function overriding
 
 ```
@@ -382,6 +419,8 @@ contract ZombieFeeding is ZombieFactory {
 
 
 **Lesson 4: Zombie Battle System**
+
+
 *we learnt...*
 
 time units in Solidity (e.g., 1 days)

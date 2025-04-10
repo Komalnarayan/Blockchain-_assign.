@@ -203,6 +203,7 @@ cat myfile_encrypted.txt
 ```
 openssl enc -d -aes-256-cbc -pbkdf2 -iter 100000 -in myfile_encrypted.txt -out decrypted_file.txt -pass pass:yourpassword
 ```
+```
 cat decrypted_file.txt
 ```
 ```
@@ -242,13 +243,205 @@ Important: Write it down and store it in a secure and offline place. Never share
 
 Confirm the phrase to complete setup.
 
+**Your account is ready to use!**
+
+![Screenshot (150)](https://github.com/user-attachments/assets/8cfe966d-808b-4cf2-84ae-d058d4ec369c)
 
 
 
 
 
 
-![875effa0-41ee-4b1b-a2ae-9decfb23c4d8](https://github.com/user-attachments/assets/bfb2a3a2-372f-4423-a974-ffc8de05ea6d)
+
+
+
+
+Now in order to add tokens in the wallet we can add them via sepolia faucet,
+these are the test token because we can't efford the etherum coin , also for the learning purpose we use them , these faucet can be get from the Google Cloud.
+
+
+
+![430856293-015216ac-1931-407c-a698-238a237f2c91](https://github.com/user-attachments/assets/88cce6d3-829c-46fa-b518-c5707e6fe9de)
+
+in the above we need to select our network and add our public key then click on recieve.
+you will get some test tokens...
+![Screenshot (156)](https://github.com/user-attachments/assets/707491b9-02e2-4f3f-8d55-46d95eba18a0)
+
+
+
+
+**Now if we want to send money,we can di it by....**
+clicking on **send**
+Now enter the public key of whom you want to send tokens
+Then, add tokens
+And, continue
+
+![Screenshot (161)](https://github.com/user-attachments/assets/780f4409-1f64-484e-b319-4796e8e1b154)
+
+
+# Practical-4 To learn solidity through cryptozombie
+
+
+CryptoZombies is an interactive and game baesd platform where we can learn Solidity, the programming language used for writing smart contracts on the Ethereum blockchain. It teaches us by building a zombie game step-by-step. From different lessons we can learn the following:-
+
+**Lesson 1: Making the Zombie Factory**
+*In this lesson we learned...*
+
+Solidity basics
+
+Contract structure
+
+State variables
+
+Functions
+
+Events
+
+*Here is the program I've created*
+```
+pragma solidity ^0.8.0;
+
+contract ZombieFactory {
+    event NewZombie(uint zombieId, string name, uint dna);
+
+    uint dnaDigits = 16;
+    uint dnaModulus = 10 ** dnaDigits;
+
+    struct Zombie {
+        string name;
+        uint dna;
+    }
+
+    Zombie[] public zombies;
+
+    function _createZombie(string memory _name, uint _dna) private {
+        zombies.push(Zombie(_name, _dna));
+        emit NewZombie(zombies.length - 1, _name, _dna);
+    }
+
+    function _generateRandomDna(string memory _str) private view returns (uint) {
+        return uint(keccak256(abi.encodePacked(_str))) % dnaModulus;
+    }
+
+    function createRandomZombie(string memory _name) public {
+        uint randDna = _generateRandomDna(_name);
+        _createZombie(_name, randDna);
+    }
+}
+
+```
+**Lesson 2: Zombie Attributes**
+*In this chapter we learnt:-*
+
+to access modifiers (public, private, internal)
+
+msg.sender
+
+Mappings
+
+require statement
+
+
+
+```
+mapping (uint => address) public zombieToOwner;
+mapping (address => uint) ownerZombieCount;
+
+function createRandomZombie(string memory _name) public {
+    require(ownerZombieCount[msg.sender] == 0);
+    uint randDna = _generateRandomDna(_name);
+    _createZombie(_name, randDna);
+    zombieToOwner[zombies.length - 1] = msg.sender;
+    ownerZombieCount[msg.sender]++;
+}
+```
+
+**Lesson 3: Advanced Solidity Concepts**
+*in this lesson we learned to...*
+
+import
+Inheritance
+Function overriding
+
+```
+import "./ZombieFactory.sol";
+
+contract ZombieFeeding is ZombieFactory {
+    function feedAndMultiply(uint _zombieId, uint _targetDna, string memory _species) public {
+        require(msg.sender == zombieToOwner[_zombieId]);
+        Zombie storage myZombie = zombies[_zombieId];
+        _targetDna = _targetDna % dnaModulus;
+        uint newDna = (myZombie.dna + _targetDna) / 2;
+        if (keccak256(abi.encodePacked(_species)) == keccak256(abi.encodePacked("kitty"))) {
+            newDna = newDna - newDna % 100 + 99;
+        }
+        _createZombie("NoName", newDna);
+    }
+}
+```
+
+
+**Lesson 4: Zombie Battle System**
+*we learnt...*
+
+time units in Solidity (e.g., 1 days)
+
+Cooldowns
+
+Struct updates
+
+Randomness
+
+```
+uint cooldownTime = 1 days;
+
+function _triggerCooldown(Zombie storage _zombie) internal {
+    _zombie.readyTime = uint32(block.timestamp + cooldownTime);
+}
+
+function _isReady(Zombie storage _zombie) internal view returns (bool) {
+    return (_zombie.readyTime <= block.timestamp);
+}
+```
+
+**Lesson 5: ERC721 & Crypto Collectibles**
+*In this lesson we learnt...*
+
+ERC721 standard (NFTs)
+
+transferFrom, ownerOf
+
+Interfacing with other contracts
+
+```
+import "./erc721.sol";
+
+contract ZombieOwnership is ERC721 {
+    mapping (uint => address) zombieApprovals;
+
+    function transferFrom(address _from, address _to, uint256 _tokenId) public override {
+        require(_from == msg.sender || zombieApprovals[_tokenId] == msg.sender);
+        ownerZombieCount[_to]++;
+        ownerZombieCount[_from]--;
+        zombieToOwner[_tokenId] = _to;
+        emit Transfer(_from, _to, _tokenId);
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

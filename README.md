@@ -209,6 +209,44 @@ cat decrypted_file.txt
 ipfs add decrypted_file.txt
 ```
 
+![875effa0-41ee-4b1b-a2ae-9decfb23c4d8](https://github.com/user-attachments/assets/9ad57088-67fe-435d-ac1b-739de92778c7)
+
+
+
+# Practical-3 Metamask
+
+**What is metamask?**
+MetaMask is a crypto wallet and gateway to blockchain applications. It lets you store, manage, and transfer cryptocurrencies, especially those on the Ethereum blockchain and other EVM-compatible networks (like BNB Chain, Polygon, Arbitrum, etc.).
+
+
+**Steps to Create a MetaMask Account**
+
+**Step 1: Install MetaMask**
+Browser Extension: Go to https://metamask.io and download the extension for Chrome, Firefox, Brave, or Edge.
+
+Mobile App: Alternatively, install the MetaMask app from Google Play Store or Apple App Store.
+
+**Step 2: Create a New Wallet**
+Click “Get Started”.
+
+Choose “Create a Wallet”.
+
+Set a strong password (at least 8 characters).
+
+Agree to the terms and conditions.
+
+**Step 3: Backup the Secret Recovery Phrase**
+MetaMask will generate a 12-word Secret Recovery Phrase.
+
+Important: Write it down and store it in a secure and offline place. Never share it with anyone.
+
+Confirm the phrase to complete setup.
+
+
+
+
+
+
 
 ![875effa0-41ee-4b1b-a2ae-9decfb23c4d8](https://github.com/user-attachments/assets/bfb2a3a2-372f-4423-a974-ffc8de05ea6d)
 

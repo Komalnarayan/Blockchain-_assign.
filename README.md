@@ -495,10 +495,9 @@ During deployment, pass candidate names like:
 
  
     
-    •  Call getCandidate(0)to see votes
+•  Call getCandidate(0)to see votes
     
-    
-    •  Call totalCandidates() to see how many candidates there are
+•  Call totalCandidates() to see how many candidates there are
     
 ![1](https://github.com/user-attachments/assets/3e8ef79e-67dd-4df8-8bbc-8bb13abb776d)
 

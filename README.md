@@ -494,11 +494,6 @@ During deployment, pass candidate names like:
  •  Call vote(0) → votes for "Pooja"
 
  
- •  Switch account (top-right of Remix)
-
- 
- •  Call vote(1) → votes for "Pooja"
- 
     
     •  Call getCandidate(0)to see votes
     

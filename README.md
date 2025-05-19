@@ -504,6 +504,7 @@ During deployment, pass candidate names like:
     
     
     •  Call totalCandidates() to see how many candidates there are
+    
 ![1](https://github.com/user-attachments/assets/3e8ef79e-67dd-4df8-8bbc-8bb13abb776d)
 
 ![1 (1)](https://github.com/user-attachments/assets/5a2f86e1-ec22-4e9f-b15f-3c914c0aa9cc)

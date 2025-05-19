@@ -481,12 +481,12 @@ During deployment, pass candidate names like:
 	•  Call vote(1) → votes for "Pooja"
     •  Call getCandidate(0)to see votes
 	•  Call totalCandidates() to see how many candidates there are
+![1](https://github.com/user-attachments/assets/3e8ef79e-67dd-4df8-8bbc-8bb13abb776d)
+![Uploading 1 (1).png…]()
 
-![1](https://github.com/user-attachments/assets/d9155feb-e1a8-4961-b8a4-fec0a2d559ef)
 
-![1 (1)](https://github.com/user-attachments/assets/f4376c24-eb2a-4a19-80f9-c7acddcec242)
 
-**Write a contract that manages a list of student records(name,roll number).Allow adding and retieving student data.**
+**2.Write a contract that manages a list of student records(name,roll number).Allow adding and retieving student data.**
 1. use the similar process like above to run and compile
     Click Deploy (no constructor input needed)
 2. Add a Student
@@ -495,10 +495,10 @@ During deployment, pass candidate names like:
 •	Call getStudent(101) → should return "Pooja", 101
 4. (Optional) See All Students
 •	Call getAllRollNumbers() → returns an array like [101]
+![2](https://github.com/user-attachments/assets/1d5fd610-b171-401d-9953-c8ea11274a91)
 
-![2](https://github.com/user-attachments/assets/d83030c1-a8f1-430e-b1d2-c98d31231977)
+![2 (2)](https://github.com/user-attachments/assets/2cdf8873-25a1-4420-a609-d47c13ec1fba)
 
-![2 (2)](https://github.com/user-attachments/assets/4af63a41-8b55-4976-a818-dda13ed78556)
 
 **3. Develope a contract that only allows the developer (owner) to call a specific function (use modifiers).**
  1. Deploy the Contract
@@ -510,9 +510,9 @@ During deployment, pass candidate names like:
 •	Input something like "Hello Owner!" (with quotes)
 •	Click the orange transact button
 It will work only for the owner (deployer)
+![3](https://github.com/user-attachments/assets/108524f8-0327-438c-9f42-c888cb814484)
+![3 (2)](https://github.com/user-attachments/assets/c69c0745-a27f-4b72-ac76-3e0228242a4c)
 
-![3](https://github.com/user-attachments/assets/1536fb1d-fe48-4764-ad50-7b77fce1a50b)
-![3 (2)](https://github.com/user-attachments/assets/3aa70424-748d-4efa-9d68-66fa58095fd5)
 
 **4.Write a contract where people can donate Ether and the top 3 donors are tracked.**
 Deploy the contract on Remix VM.
@@ -521,12 +521,11 @@ Deploy the contract on Remix VM.
 •	Click Transact.
 2.	Repeat donations from different accounts.
 3.	Call getTopDonor(0), getTopDonor(1), getTopDonor(2) to see the top 3 donors.
+![4](https://github.com/user-attachments/assets/66b84eb7-a220-4d46-9d6c-349e05f14194)
+![4 (2)](https://github.com/user-attachments/assets/9d5be242-ced4-4e4d-ba44-c6d5f3c475c8)
+![4 (3)](https://github.com/user-attachments/assets/5430c83a-e309-4813-a342-4f529947f21a)
 
-![4](https://github.com/user-attachments/assets/a9578d9b-fa24-4810-b909-3a28605ae8bd)
 
-![4 (2)](https://github.com/user-attachments/assets/a324eb26-1f22-4d92-a75b-6181194103e6)
-
-![4 (3)](https://github.com/user-attachments/assets/1f33f61a-6dab-45b9-976c-f30460c319a0)
 
 **5.Implement a simple auction system where users can place bids, and the highest bidder wins.**
 	•  Deploy with, e.g., _biddingTimeSeconds = 60 (1 minute).
@@ -534,13 +533,10 @@ Deploy the contract on Remix VM.
     •  Another user calls bid() with higher value.
 	•  The first user calls withdraw() to get back their previous bid.
 	•  After auction time passes, call auctionEnd() to end auction and send funds to owner.
- 
-![5](https://github.com/user-attachments/assets/3a668e02-8c31-4f40-9eac-a1908bd8dd65)
+ ![5](https://github.com/user-attachments/assets/12e1bf23-7891-4bec-b753-5c7ca5c6eef3)
+![5 (2)](https://github.com/user-attachments/assets/35a3d09a-6832-425c-98c0-93eb573aab6e)
+![5 (3)](https://github.com/user-attachments/assets/b6642df1-2d17-433f-a2d2-a988701c50c2)
 
-
-![5 (2)](https://github.com/user-attachments/assets/2451875a-5978-4191-bffb-018b1c90bca5)
-
-![5 (3)](https://github.com/user-attachments/assets/0fd4c63d-4fd3-43bc-944a-18a14fdcd52d)
 
 **6.Create a contract that splits incoimg Ether betwwen 3 fixed addresses.**
 1.	Deploy it in the Remix VM (Prague) environment.
@@ -550,12 +546,9 @@ Deploy the contract on Remix VM.
 •	After deployment, select the deployed contract under “Deployed Contracts.”
 •	Send Ether to the contract by clicking on the contract address or calling the receive() function (just send a transaction without data).
 •	Call the getBalances() function to see balances of the three addresses in wei.
+![6](https://github.com/user-attachments/assets/e805a412-69ca-4087-ba7d-06687b29f71a)
 
-
-![6](https://github.com/user-attachments/assets/b0885175-f00f-4bc8-8876-b83f78571294)
-
-
-![6 (2)](https://github.com/user-attachments/assets/3f5d68da-5b10-49ff-9a1f-73b4c4e5b5e7)
+![6 (2)](https://github.com/user-attachments/assets/2d53619a-455e-47a2-9371-36a5a7cc4900)
 
 
 
